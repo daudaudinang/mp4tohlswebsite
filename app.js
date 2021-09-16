@@ -98,7 +98,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.locals.baseURL = 'http://localhost:'+process.env.PORT;
+app.locals.baseURL = process.env.BASEURL + ":" + process.env.PORT;
 
-console.log(app.locals.baseURL);
 module.exports = app;
